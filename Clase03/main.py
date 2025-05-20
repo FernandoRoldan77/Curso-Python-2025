@@ -220,18 +220,18 @@ por fuera del bucle => se ejecutará una vez terminado el bucle.
 #     print("paso esto:! ")
 
 
-# contador = 0
-# while True:
-#     nombre = input("Ingresá tu nombre: ").strip().lower()
-#     if nombre == "angel":
-#         print("entraste!")
-#         break
-#     print(contador)
-#     if contador == 3:
-#         break
-#     contador = contador + 1
+contador = 0
+while True:
+    nombre = input("Ingresá tu nombre: ").strip().lower()
+    if nombre == "angel":
+        print("entraste!")
+        break
+    print(contador)
+    if contador == 3:
+        break
+    contador = contador + 1
 
-# print("cortaste el bucle")
+print("cortaste el bucle")
 
 
 ### Próxima clase! 
