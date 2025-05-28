@@ -47,32 +47,16 @@
 # Generá un bucle que sume a la variable "resultado" el valor de 7 y que se repita hasta que el usuario ingrese algunas de estas palabra: 
 #fin o Fin o FIn o fiN
 
-# resultado = 0 
+resultado = 0 
+palabra = input("El usuario ingresa la palabra:").strip().upper() #Para que filtra cualquier tipo de  diferencia en el string
 
+while palabra != "fin":
+    resultado = resultado +7 
+    print(resultado)
+    palabra =  input("El usuario ingresa la palabra: ").strip().lower()
 
-# while True:
-#   palabra = input("El usuario ingresa la palabra:")
-#   if(palabra == "fin"): 
-   
-#    break
+print("finalizaste el bucle")
 
-#   if(palabra == "Fin"):
-   
-#    break
-    
-#   if(palabra == "FIn"): 
-   
-#    break 
-   
-#   if(palabra == "fiN"):
-   
-#    break
-  
-#   resultado = resultado +7
-#   print(resultado)  
-   
-
-    #print("Fin del ciclo")    
 
 # Creá un programa que simule el ingreso de un usuario con nombre y contraseña.
 
@@ -92,23 +76,23 @@
 
 # Si se equivoca en la contraseña, mostrá: "Intentá de nuevo" y volvé a pedir la contraseña hasta que acierte. 
 
-nombre          = input(f"Ingresar nombre: ")
-nombreCorrecto1 = "L10nel Me55i"
-nombreCorrecto2 = "basta"
+# nombre          = input(f"Ingresar nombre: ")
+# nombreCorrecto1 = "L10nel Me55i"
+# nombreCorrecto2 = "basta"
 
-while True :
-  if (nombre == nombreCorrecto1 ): 
-    resultado    = input(f"Cuánto es 18 + 7?")
-    rtaResultado = "25"
+# while True :
+#   if (nombre == nombreCorrecto1 ): 
+#     resultado    = input(f"Cuánto es 18 + 7?")
+#     rtaResultado = "25"
     
-    if(resultado == rtaResultado):
-      print("¡Bienvenido!")
-      break
-    else:
-     print("ingresaste el resultado incorrecto")
+#     if(resultado == rtaResultado):
+#       print("¡Bienvenido!")
+#       break
+#     else:
+#      print("ingresaste el resultado incorrecto")
      
-  elif(nombre == nombreCorrecto2): 
-    break
+#   elif(nombre == nombreCorrecto2): 
+#     break
   
    
 
