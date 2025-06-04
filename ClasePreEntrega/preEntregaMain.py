@@ -117,6 +117,8 @@ while(opcionesParaElUsuario <= 5):
         * Me hubiese gustado poder hacer validaciones mas exigentes con respeto
           al ingreso de input, que solamente admita determinados valores y mediante try, catch y excepciones
           poder personalizar mas los mensajes de errores para el usuario como por ejemplo si ingresa un valor no numerico
+        
+        *tambien formas mas eficientes para que el usuario pueda regresar a opciones anteriores mas personalizadas y no genericas a todo el menu
           
         * Utilizar funciones para darle mas legibilidad al codigo y ahorrar lineas.
         
