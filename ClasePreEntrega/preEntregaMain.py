@@ -1,9 +1,9 @@
 
 #Lista con productos y sus sublistas de productos
-producto1      = ["Pera",   "Frutas",    10]
-producto2      = ["Pan",    "Panaderia", 50]
-producto3      = ["Cerveza","Bebidas",   100]
-datosProductos = [producto1,producto2,producto3]
+p1          = ["Pera",   "Frutas",    10]
+p2          = ["Pan",    "Panaderia", 50]
+p3          = ["Cerveza","Bebidas",   100]
+productos   = [p1,p2,p3]
 
 #Variables por si a futuro se quiere escalar las opciones en el inicio
 opciones       = [("1. Agregar producto"),("2. Mostrar productos"),
@@ -41,7 +41,7 @@ while(opcionesParaElUsuario <= 5):
         
         #Agrega una lista de producto, con categoria y precio a la lista de productos
         nuevoProducto = [productoAgregado,categoriaProducto,precioProducto]
-        datosProductos.append(nuevoProducto)
+        productos.append(nuevoProducto)
         opcionesParaElUsuario = int(input(msjVolverOSeguir))
         
         #Para evitar que el usuario elija otro caso del case
@@ -50,7 +50,7 @@ while(opcionesParaElUsuario <= 5):
             opcionesParaElUsuario = int(input(msjVolverOSeguir))
         
     case 2: #Muestra los productos
-        for producto in enumerate(datosProductos): 
+        for producto in enumerate(productos): 
             print (producto) 
         opcionesParaElUsuario = int(input(msjVolverOSeguir))
         
@@ -61,11 +61,12 @@ while(opcionesParaElUsuario <= 5):
         
     case 3: #Muestra el producto solicitado por el usuario
         pBuscado = input("¿Que producto desea buscar?: ").strip().capitalize()
-        for producto in datosProductos:
+        for producto in productos:
             if(pBuscado in producto):       #palabra reservada para buscar si un elemento pertenece a una lista.
                 print(f"Producto solicitado: {producto} \n")
-                break  
-            else:
+                break #Porque ya encontro el producto 
+                
+        else:
                 print(f"El producto {pBuscado} no esta en el sistema\n")    
                 break #Para que el print no repita la longitud de la lista 
                 
@@ -80,21 +81,21 @@ while(opcionesParaElUsuario <= 5):
     
         #Para que el usuario vea que quiere eliminar
         print("¿Que producto quiere borrar?\n")
-        for producto in enumerate(datosProductos): 
+        for producto in enumerate(productos): 
             print (producto)     
             
         #Elegir mediante el indice que se quiere eliminar            
         posABorrar   = int(input("Seleccione el numero de posicion para borrar: "))         
-        for indiceP, producto in enumerate(datosProductos):
-                if(posABorrar >= len(datosProductos) ):
+        for indiceP, producto in enumerate(productos):
+                if(posABorrar >= len(productos) ):
                     print("El numero de posicion es invalido, vuelva a elegir una opcion valida por favor\n")
                     break
                 if( (indiceP == posABorrar)  ):
-                        datosProductos.pop(posABorrar)
+                        productos.pop(posABorrar)
                         print("Producto borrado exitosamente\n")                                    
                       
         #Muestra que se borro exitosamente el producto                                                                       
-        for producto in enumerate(datosProductos): 
+        for producto in enumerate(productos): 
             print (producto)                 
         
         opcionesParaElUsuario = int(input(msjVolverOSeguir))
